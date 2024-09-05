@@ -1,0 +1,24 @@
+\setcounter{exm}{5}
+
+\begin{exm}
+\begin{enumerate}
+\item Le tableau des signes de $f\colon x\mapsto -3(2x-5)(6-4x)$ est  : \hfill
+    \begin{tikzpicture}[baseline={($(current bounding box.north)-(0,\ht\strutbox)$)}]
+    \tkzTabInit[lgt=1.5,espcl=2]{$x$/0.5,$-3$/0.5,$2x-5$/0.5,$6-4x$/0.5,$f(x)$/0.5}{$-\infty$,$\numprint{1.5}$,$\numprint{2.5}$,$+\infty$}
+    \tkzTabLine{,-,t,-,t,-,}
+    \tkzTabLine{,-,t,-,z,+,}
+    \tkzTabLine{,+,z,-,t,-,}
+    \tkzTabLine{,+,z,-,z,+,}
+    \end{tikzpicture}
+\item Le tableau des signes de $g\colon x\mapsto \frac{-3(2x-5)}{6-4x}$ est :\hfill
+    \begin{tikzpicture}[baseline={($(current bounding box.north)-(0,\ht\strutbox)$)}]
+    \tkzTabInit[lgt=1.5,espcl=2]{$x$/0.5,$-3$/0.5,$2x-5$/0.5,$6-4x$/0.5,$f(x)$/0.5}{$-\infty$,$\numprint{1.5}$,$\numprint{2.5}$,$+\infty$}
+    \tkzTabLine{,-,t,-,t,-,}
+    \tkzTabLine{,-,t,-,z,+,}
+    \tkzTabLine{,+,z,-,t,-,}
+    \tkzTabLine{,+,d,-,z,+,}
+    \end{tikzpicture}
+\item L'ensemble des solutions de l'inéquation $f(x)\geqslant0$ est $\intervalleof{-\infty;1,5}\cup\intervallefo{2,5;+\infty}$.
+\item L'ensemble des solutions de l'inéquation $g(x)\geqslant0$ est $\intervalleo{-\infty;1,5}\cup\intervallefo{2,5;+\infty}$.
+\end{enumerate}
+\end{exm}

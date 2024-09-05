@@ -1,0 +1,41 @@
+% !TeX root =../../../courant/2-05-fct-2-affine.tex
+%
+%
+%
+%
+\begin{exr}
+  \begin{enumerate}[start=3]
+  \item $f$ est une fonction affine donc ses taux d'accroissements sont identiques.
+  
+  Ils sont tous égaux à $\frac{f(5)-f(-1)}{5-(-1)}=\frac{-7-1}{5-(-1)}=\frac{-8}{6}=-\frac43$.
+  
+  \begin{itemize}
+  \item Le taux d'accroissement de $f$ entre $-1$ et $10$ est $\frac{f(10)-f(-1)}{10-(-1)}=\frac{f(10)-1}{11}$. 
+
+On a  donc  $\frac{f(10)-1}{11}=-\frac43$ d'où $f(10)-1=-\frac{4}{3}\times11=-\frac{44}{3}$ puis $f(10)=1-\frac{44}{3}=\frac{3-44}{3}=-\frac{41}{3}$.
+  \item   Notons $x_0$ un antécédent de $20$. Le taux d'accroissement de $f$ entre $5$ et $x_0$ est $\frac{f(x_0)-f(5)}{x_0-5}=\frac{20-(-7)}{x_0-5}=\frac{27}{x_0-5}$.
+  
+  On a donc $\frac{27}{x_0-5}=-\frac43$ d'où $27=-\frac43(x_0-5)$ puis $x_0-5=\frac{27}{-\frac43}=-\frac{27\times3}{4}=-\frac{81}{4}$ et $x_0=5-\frac{81}{4}=\frac{20-81}{4}=-\frac{61}{4}$.
+  \item On a donc 
+    \renewcommand{\arraystretch}{1.75}
+    \begin{tabular}{|c|c|c|c|c|}\hline
+    $x$ & $-1$ & $5$ & $10$ & $-\frac{61}{4}$ \\ \hline
+    $f(x)$ &1 &$ -7$&$-\frac{41}{3}$ & $20$ \\ \hline
+    \end{tabular}  
+  \end{itemize}
+  \item Supposons qu'il existe une fonction linéaire $f$ telle que $f(2) = 4$ et $f(7) = 9$.
+  
+  Il existe alors un réel $m$ tel que $f(x)=mx$ pour tout réel $x$.
+  
+  On a alors : $m=\frac{f(7)-f(2)}{7-2}=\frac{9-4}{7-2}=\frac55=1$.
+  
+  On a donc $f(x)=x$.
+  
+  Mais alors $f(2)=2$, ce qui contredit $f(2)=4$.
+  
+  Il n'existe donc pas de fonction linéaire telle que $f(2) = 4$ et $f(7) = 9$.
+  \end{enumerate}
+\end{exr}
+%
+%
+%

@@ -1,0 +1,69 @@
+% !TeX root =../../../courant/2-05-fct-2-affine.tex
+%
+%
+%
+%
+\begin{exr}
+  \begin{enumerate}
+  \item $f$ est une fonction linéaire définie sur $\R$ donc $f(x)=mx$ pour tout réel $x$.
+  
+  Or $f(2)=-3$ et $f(2)=2m$ donc $2m=-3$ d'où $m=-\frac32=-1,5$.
+  
+  On a alors $f(x)=-1,5x$ d'où $f(4)=-1,5\times4=-6$ et $f(-2)=-1,5\times(-2)=3$.
+
+\textbf{Autre méthode :}
+
+Une fonction est linéaire lorsque les images par $f$ sont proportionnelles aux antécédents.
+
+On a donc $f(4)=f(2\times2)=2f(2)=2\times(-3)=-6$ et $f(-2)=f(-1\times2)=-1\times f(2)=-(-3)=3$.
+
+Ces calculs reviennent à compléter le tableau  
+    $\begin{array}{|c|c|c|c|}\hline
+    x     & 2 & 4 & -2 \\ \hline
+    f(x) & -3 &   ?  & ?   \\ \hline
+    \end{array}$ de sorte que ce soit un tableau de proportionnalité.
+  \item $f$ est une fonction affine donc les taux d'accroissements de $f$ entre $12$ et $137$  et entre $137$ et $180$ sont égaux.
+  
+  Le taux d'accroissement de $f$ entre $12$ et $137$ est $\frac{f(137)-f(12)}{137-12}=\frac{-10400+280}{125}=\frac{-10120}{125}=-80,96$.
+
+  Le taux d'accroissement de $f$ entre $137$ et $180$ est $\frac{f(180)-f(137)}{180-137}=\frac{f(180)+10400}{43}$.
+  
+  On a donc :
+  \vspace*{0.5ex}
+  \begin{centered} 
+   $\frac{f(180)+10400}{43}=-80,96$ d'où $f(180)+10400=-80,96\times43=-3481,28$ puis $f(180)=-3481,28-10400=-13881,28$.
+  \end{centered} 
+  \item $f$ est une fonction affine donc ses taux d'accroissements sont identiques.
+  
+  Ils sont tous égaux à $\frac{f(5)-f(-1)}{5-(-1)}=\frac{-7-1}{5-(-1)}=\frac{-8}{6}=-\frac43$.
+  
+  \begin{itemize}
+  \item Le taux d'accroissement de $f$ entre $-1$ et $10$ est $\frac{f(10)-f(-1)}{10-(-1)}=\frac{f(10)-1}{11}$. 
+
+On a  donc  $\frac{f(10)-1}{11}=-\frac43$ d'où $f(10)-1=-\frac{4}{3}\times11=-\frac{44}{3}$ puis $f(10)=1-\frac{44}{3}=\frac{3-44}{3}=-\frac{41}{3}$.
+  \item   Notons $x_0$ un antécédent de $20$. Le taux d'accroissement de $f$ entre $5$ et $x_0$ est $\frac{f(x_0)-f(5)}{x_0-5}=\frac{20-(-7)}{x_0-5}=\frac{27}{x_0-5}$.
+  
+  On a donc $\frac{27}{x_0-5}=-\frac43$ d'où $27=-\frac43(x_0-5)$ puis $x_0-5=\frac{27}{-\frac43}=-\frac{27\times3}{4}=-\frac{81}{4}$ et $x_0=5-\frac{81}{4}=\frac{20-81}{4}=-\frac{61}{4}$.
+  \item On a donc 
+    \renewcommand{\arraystretch}{1.75}
+    \begin{tabular}{|c|c|c|c|c|}\hline
+    $x$ & $-1$ & $5$ & $10$ & $-\frac{61}{4}$ \\ \hline
+    $f(x)$ &1 &$ -7$&$-\frac{41}{3}$ & $20$ \\ \hline
+    \end{tabular}  
+  \end{itemize}
+  \item Supposons qu'il existe une fonction linéaire $f$ telle que $f(2) = 4$ et $f(7) = 9$.
+  
+  Il existe alors un réel $m$ tel que $f(x)=mx$ pour tout réel $x$.
+  
+  On a alors : $m=\frac{f(7)-f(2)}{7-2}=\frac{9-4}{7-2}=\frac55=1$.
+  
+  On a donc $f(x)=x$.
+  
+  Mais alors $f(2)=2$, ce qui contredit $f(2)=4$.
+  
+  Il n'existe donc pas de fonction linéaire telle que $f(2) = 4$ et $f(7) = 9$.
+  \end{enumerate}
+\end{exr}
+%
+%
+%

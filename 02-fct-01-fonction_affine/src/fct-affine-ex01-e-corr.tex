@@ -1,0 +1,98 @@
+% !TeX root =../../../courant/2-05-fct-2-affine.tex
+%
+  \begin{exr}
+    \begin{enumerate}
+    \item 
+      \begin{enumerate}
+      \item 
+        \begin{multicols}{3}
+          \begin{itemize}
+          \item  $d_1 \colon y=2x+1$,
+          \item  $d_2 \colon y=-\frac34x-2$,
+          \item  $d_3 \colon x=-3$.
+          \end{itemize}
+        \end{multicols}
+      \item 
+          \begin{itemize}
+          \item Pour tout réel $x$,  $f_4(x)=4$.
+          \item Pour tout réel $x$,  $f_5(x)=-\frac12x-1$.
+          \item Pour tout réel $x$,  $f_6(x)=-\frac35x+2$.
+          \end{itemize}
+      \end{enumerate}
+    \item Voir le graphique.
+    \item Voir le graphique.
+    \item 
+      \begin{itemize}
+      \item $\frac23x_A=\frac23\times 7=\frac{14}3$ or $\frac{14}{3}\neq4,66667$ donc $\frac23x_A\neq y_A$ donc $A\not\in D_4$.
+      \item $\frac23x_B=\frac23\times\frac16=\frac{1}9=y_B$ donc $B\in D_4$.
+      \end{itemize}
+%    \item 
+%      \begin{itemize}
+%      \item 
+%        \begin{itemize}
+%        \item $-1,5x+5\geqslant 2 \ssi -1,5x \geqslant -3 \ssi x\leqslant \frac{-3}{-1,5} \ssi x\leqslant 2$. L'ensemble des solutions est $\intervalleof{-\infty;2}$.
+%        \item La fonction $x\mapsto -1,5x+5$ est représentée par $D_3$.
+%        
+%        Les solutions de l'inéquation sont les abscisses des points de $D_3$ dont l'ordonnée est supérieure ou égale à $2$. Par lecture graphique, l'ensemble des solutions semble être $\intervalleof{-\infty;2}$, ce qui confirme le résultat précédent.
+%        \end{itemize}
+%      \item 
+%        \begin{itemize}
+%        \item $2x+1<0 \ssi 2x<-1 \ssi x<-0,5$. L'ensemble des solutions est $\intervalleo{-\infty;-0,5}$.
+%        \item La fonction $x\mapsto 2x+1$ est représentée par $d_1$.
+%        
+%        Les solutions de l'inéquation sont les abscisses des points de $d_1$ strictement au-dessous de l'axe des abscisses. Par lecture graphique, l'ensemble des solutions semble être $\intervalleo{-\infty;-0,5}$, ce qui confirme le résultat précédent.
+%        \end{itemize}
+%      \item 
+%        \begin{itemize}
+%        \item $2x+1<-1,5x+5 \ssi 3,5x <4 \ssi x < \frac{4}{3,5} \ssi x < \frac87$. L'ensemble des solutions est $\intervalleo*{-\infty;\frac87}$.
+%        \item 
+%        Les solutions de l'inéquation sont les abscisses des points de $d_1$ situés strictement au-dessous de $D_3$. Par lecture graphique, l'ensemble des solutions semble être $\intervalleo{-\infty;1,1}$.
+%        
+%        $1,1\simeq\frac87$ donc les deux résultats sont cohérents.
+%        \end{itemize}
+%      \end{itemize}
+    \end{enumerate}
+
+  \begin{tikzpicture}[x=1cm,y=1cm]
+    \drawrepere[add to x axis end=1.5pt]{-5,5,-5,6}
+    \draw[color=black, domain=-3:2.48, line width=1pt,densely dashed] plot[id=f] function{2*x+1}; 
+    \node[below right,fill=white,inner sep=0pt,outer sep=1pt] at (-2,-3) {$d_1$};
+    \draw[magenta,line width=1.5pt,densely dashed] (-2,-3)-|(-1,-1) node[pos=0.25,below]{$1$}node [pos=0.75,right]{$2$};
+%
+    \draw[color=black, domain=-5:4 , line width=1pt,densely dashed] plot[id=f] function{-0.75*x-2};
+    \node[below left,fill=white,inner sep=0pt,outer sep=1pt] at (3,-4.25) {$d_2$};
+    \draw[magenta,line width=1.5pt,densely dashed] (0,-2)-|(4,-5) node[pos=0.25,above,fill=white]{$4$}node [pos=0.75,left]{$-3$};
+%
+    \draw[color=black,line width=1pt,densely dashed] (-3,-5) -- (-3,6)  node[below left,fill=white,inner sep=0pt,outer sep=1pt] {$d_3$};
+%
+    \draw[color=black, domain=-5:5 , line width=1pt,densely dashed] plot[id=f] function{4}; 
+    \node[above,fill=white,inner sep=0pt,outer sep=1pt] at (4,4) {$d_4$};
+%
+    \draw[color=black, domain=-5:5 , line width=1pt,densely dashed] plot[id=f] function{-0.5*x-1};
+    \node[below,fill=white,inner sep=0pt,outer sep=1pt] at (4,-3){$d_5$};
+    \draw[magenta,line width=1.5pt,densely dashed] (-4,1)-|(-2,0) node[pos=0.25,above,fill=white]{$2$}node [pos=0.75,right]{$-1$};
+%
+    \draw[color=black, domain=-5:5 , line width=1pt,densely dashed] plot[id=f] function{-3.0/5*x+2};
+    \node[above,fill=white,inner sep=0pt,outer sep=1pt] at (-5,5) {$d_6$};
+    \draw[magenta,line width=1.5pt,densely dashed] (0,2)-|(5,-1) node[pos=0.25,above,fill=white]{$5$}node [pos=0.75,left]{$-3$};
+%
+    \draw[color=black, domain=-2.5:5, line width=1pt,red] plot[id=f] function{2/5.0*x-4};
+    \node[red,fill=white,inner sep=0pt,outer sep=1pt] at (1,-4) {$D_1$};
+    \draw[magenta,line width=1.5pt,densely dashed] (0,5)-|(2,2) node[pos=0.25,above,fill=white]{$2$}node [pos=0.75,right]{$-3$};
+%
+    \draw[color=black, domain=-3:5, line width=1pt,red] plot[id=f] function{-x+3};
+    \node[red,right,fill=white,inner sep=0pt,outer sep=1pt] at (-2.25,5.5) {$D_2$};
+    \draw[magenta,line width=1.5pt,densely dashed] (0,3)-|(1,2) node[pos=0.25,above,fill=white]{$1$}node [pos=0.75,right]{$-1$};
+%
+    \draw[color=black, domain=-0.65:5, line width=1pt,red] plot[id=f] function{-1.5*x+5};
+    \node[red,left,fill=white,inner sep=0pt,outer sep=1pt] at (-0.5,5.5) {$D_3$};
+    \draw[magenta,line width=1.5pt,densely dashed] (0,-4)-|(5,-2) node[pos=0.25,below,fill=white]{$5$}node [pos=0.75,left]{$2$};
+%
+    \draw[color=black, domain=-5:5 , line width=1pt,red] plot[id=f] function{2.0/3*x};
+    \node[red,below,fill=white,inner sep=0pt,outer sep=1pt] at (-5,-10/3) {$D_4$};
+    \draw[magenta,line width=1.5pt,densely dashed] (0,0)-|(3,2) node[pos=0.25,below,fill=white]{$3$}node [pos=0.75,right]{$2$};
+%
+    \drawpoints[mark style={mark options={color=orange}}]{0,0;0,1;0,2;0,3;0,4;0,5;0,-1;0,-2;0,-4}
+  \end{tikzpicture}
+
+  \end{exr}

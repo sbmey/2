@@ -1,0 +1,74 @@
+% !TeX root =../../../courant/2-05-fct-2-affine.tex
+%
+%
+%
+%
+\begin{exr}Des justifications sont à apporter (concernant les valeurs de la ligne $x$ et les signes des deux premières lignes de signes de chaque tableau).
+\begin{enumerate}
+\item 
+\begin{enumerate}[start=3]
+\item
+\begin{tikzpicture}[baseline={($(current bounding box.north)-(0,1.6ex)$)}]
+\tkzTabInit[lgt=3,espcl=1.75]{$x$ /0.75%
+				, $4-6x$ /0.5
+				, $2-8x$/0.5
+				, $(4-6x)(2-8x)$/0.5}%
+{$-\infty$,\numprint{0,25},$\frac23$,$+\infty$}%
+\tkzTabLine{ , + , t , + , z ,- }
+\tkzTabLine{ , + , z , - , t ,- }
+\tkzTabLine{ , + , z , - , z ,+ }
+\end{tikzpicture}
+
+\vspace*{0.5ex}
+L'ensemble des solutions de $(4-6x)(2-8x)< 0$ est $\intervalleo*{0,25;\frac23}$
+\end{enumerate}
+% Faire aussi (2x+3)(11-12x)>0
+\item 
+    \begin{enumerate}
+    \item
+        \begin{tikzpicture}[baseline={($(current bounding box.north)-(0,1.6ex)$)}]
+\tkzTabInit[lgt=3,espcl=1.75]{$x$ /0.75%
+				, $4x-5$ /0.5
+				, $2x+3$/0.5
+				, $\frac{4x-5}{2x+3}$/0.75}%
+{$-\infty$,$\numprint{-1.5}$,$\numprint{1.25}$,$+\infty$}%
+\tkzTabLine{ , - , t , - , z ,+ }
+\tkzTabLine{ , - , z , + , t ,+ }
+\tkzTabLine{ , + , d , - , z ,+ }
+        \end{tikzpicture}
+
+\vspace*{0.5ex}L'ensemble des solutions de $\frac{4x-5}{2x+3}< 0$ est $\intervalleo{-1,5;1,25}$.
+\vspace*{0.5ex}    \item
+        \begin{tikzpicture}[baseline={($(current bounding box.north)-(0,1.6ex)$)}]
+\tkzTabInit[lgt=3,espcl=1.75]{$x$ /0.75%
+				, $4+9x$ /0.5
+				, $3-6x$/0.5
+				, $\frac{4+9x}{3-6x}$/0.75}%
+{$-\infty$,$-\frac{4}{9}$,$\numprint{0.5}$,$+\infty$}%
+\tkzTabLine{ , - , z , + , t ,+ }
+\tkzTabLine{ , + , t , + , z ,- }
+\tkzTabLine{ , - , z , + , d ,- }
+        \end{tikzpicture}
+
+\vspace*{0.5ex}
+L'ensemble des solutions de $\frac{4+9x}{3-6x}\geqslant 0$ est $\intervallefo*{-\frac{4}{9};0,5}$.
+\vspace*{0.5ex}    \item
+        \begin{tikzpicture}[baseline={($(current bounding box.north)-(0,1.6ex)$)}]
+\tkzTabInit[lgt=3,espcl=1.75]{$x$ /0.75%
+				, $-7+2x$/0.5
+				, $-5+3x$ /0.5
+				, $\frac{-7+2x}{-5+3x}$/0.75}%
+{$-\infty$,$\frac53$,$\numprint{3.5}$,$+\infty$}%
+\tkzTabLine{ , - , t , - , z , + }
+\tkzTabLine{ , - , z , + , t , + }
+\tkzTabLine{ , + , z , - , d ,+ }
+        \end{tikzpicture}
+
+\vspace*{0.5ex}
+L'ensemble des solutions de $\frac{-5+3x}{-7+2x}\geqslant 0$ est $\intervalleof*{-\infty;\frac53}\cup\intervalleo*{3,5;+\infty}$.
+    \end{enumerate}
+\end{enumerate}
+\end{exr}
+%
+%
+%
