@@ -1,2 +1,2 @@
 # 2
-Lycée Math Secondes
+Math --> Lycée --> Seconde
