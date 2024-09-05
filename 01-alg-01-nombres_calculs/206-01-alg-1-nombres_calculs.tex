@@ -1,0 +1,79 @@
+% !TeX program = LuaLaTeX-SE
+% !TeX encoding = UTF-8
+% !TeX spellcheck = fr_FR
+%
+\documentclass[%
+    11pt,%
+    niveau=2,%
+%    division = 06,%
+    partie-titre=alg,%
+    chapitre-num=1,%
+    chapitre-titre={Nombres et calculs},%
+    chemin={./src},%
+    genre=a,%
+    sousgenre-at=south,%
+    nested-src,%
+%    chapitre-unique,%
+%    1by1,%
+%    massicot=act2fordistrib,%
+%    page-pleine,%
+    2pagessur1=2%
+    ]{cours}
+%
+\usepackage{%
+    mys-notation-math,%
+    mys-notation-ens-nbre,%
+    mys-calcul,%
+    mys-notation-nonmath,%
+    mys-notation-geometrie,%
+    mys-notation-nombre,%
+    mys-notation-analyse,%
+%    mys-notation-arith,%
+%    mys-notation-fonction,%
+    mys-notation-logique,%
+%    mys-notation-lycee,%
+%    mys-notation-pourcentage,%
+%    mys-notation-proba,%
+%    mys-notation-trigo,%
+%    mys-notation-vect,%
+    mys-graph-repere,%
+%    mys-tableaux-tools,%
+%    mys-tikz-venn,%
+%    mys-l3points,%
+%    mys-resolution-geo-analytique,%
+%    pythontex%
+    }
+%
+%\usepackage{lua-visual-debug}
+%
+\metadatadate{04}{09}{2024}
+%
+%####################################################
+%++++++++++++++++++++++++++++++++++++++++++++++++++++
+%
+%  Titre du chapitre
+%     \title{Les calculs}
+%
+%++++++++++++++++++++++++++++++++++++++++++++++++++++
+%####################################################
+%
+%\exclure{\listeenvcomplements}
+%\Setexr{newpage}
+%
+% Pour la fiche de méthode avec deux pages sur une
+%\setlength{\lignetitrepos}{-0.9cm}
+%
+\begin{document}
+%
+\maketitle{}
+%
+\Input{nombres_calculs}
+%
+%\Input{calculs-cl}
+%\input{./exr/calcul-cl2-e-corr}
+%
+\remaketitle{}
+%%
+\Input{nombres_calculs}
+%
+\end{document}
