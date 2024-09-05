@@ -1,0 +1,232 @@
+% !TeX root = ../../../../courant/2-02-alg-2-calculs.tex
+% !TeX program = LuaLaTeX-SE
+% !TeX encoding = UTF-8
+% !TeX spellcheck = fr_FR
+%
+%
+%
+%<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->
+%
+                \section{Les natures des nombres}
+%
+%<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->
+    \begin{dfn}
+    \begin{enumerate}
+    \item L'ensemble des nombres entiers naturels est $\ensemble{0;1;2;3;\cdots}$, il se note aussi $\N$.
+    \item L'ensemble des nombres entiers relatifs est $\ensemble{\cdots;-3;-2;-1;0;1;2;3;\cdots}$. Il se note aussi $\Z$.
+    \item Un nombre décimal est un nombre dont une écriture décimale n'a qu'un nombre fini de décimales.
+    
+    L'ensemble des nombres décimaux se note $\D$.
+    \item Un nombre rationnel est le quotient d'un nombre entier relatif par un nombre entier naturel non nul. C'est donc un nombre que l'on peut écrire sous la forme d'une fraction $\frac{a}{b}$ avec $a\in\Z$ et $b\in\N^*$.
+    
+    L'ensemble des nombres rationnels se note $\Q$.
+    \item Les nombres que vous connaissez (ceux définis par une écriture décimale ayant un nombre fini ou infini de chiffres) s'appellent des nombres réels.
+         
+    L'ensemble des nombres réels se note $\R$. 
+\end{enumerate}
+    \end{dfn}
+    
+%    \begin{rmq}
+%    Tous les nombres que vous manipulerez en seconde sont des nombres réels. 
+%    \end{rmq}
+
+    \begin{prp}On a $\N\subset\Z\subset \D\subset \Q\subset \R$.
+
+Autrement dit : tout nombre entier naturel est aussi un entier relatif, tout nombre entier relatif est un nombre décimal, tout nombre décimal est un nombre rationnel et tout nombre rationnel est un nombre réel.     
+    \end{prp}
+
+\begin{rmq}
+    Le symbole $\subset$ se lit "est inclus dans" et se place entre deux ensembles. Il signifie que tous les éléments de l'ensemble de gauche sont dans l'ensemble de droite.
+\end{rmq}
+    
+%%<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->
+%%
+%                \section{Les nombres réels}
+%%
+%%<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->
+%%
+%\begin{ntt}
+%\begin{itemize-}(2)
+%\item $\N$ est l'ensemble des nombres \emph{entiers naturels},
+%\item $\Z$ est l'ensemble des nombres \emph{entiers relatifs},
+%\item $\D$ est l'ensemble des nombres \emph{décimaux},
+%\item $\Q$ est l'ensemble des nombres rationnels.
+%\end{itemize-}
+%\end{ntt}
+%
+%\begin{dfn}[name={droite réelle}]
+%On considère une droite  munie d'un repère $\repere{I}$.\newline
+%Les nombres \emph{réels} sont les abscisses des points de cette droite. Leur ensemble est noté $\R$.
+%
+%\begin{intgr}
+%    \pgfkeys{/pgf/number format/use comma}
+%    \begin{tikzpicture}[baseline]
+%    \draw[-{Latex[]}] (-2,0)--(6,0);
+%    \foreach \i in {-1,0,1,2,3,4}{%
+%        \draw (\i,2pt)--(\i,-2pt);
+%        \ifnum \i=0 
+%            \node[anchor=north] at (\i,0) {$\i$};
+%        \else
+%            \ifnum \i=1 
+%                \node[anchor=north] at (\i,0) {$\i$};
+%            \else
+%                \node[anchor=south] at (\i,0) {$\i$};
+%            \fi
+%        \fi    
+%        }
+%    \foreach \i in {-0.666666,1.41421356,3.24}{\filldraw (\i,0) circle (2pt);}
+%    \node[anchor=south] at (0,0) {$O$};
+%    \node[anchor=south] at (1,0) {$I$};
+%    \node[anchor=north] at (-0.666666,0) {$-\frac23$};
+%    \node[anchor=north] at (1.41421356,0) {$\sqrt2$};
+%    \node[anchor=north] at (3.24,0) {$\pgfmathprintnumber{3.24}$};
+%    \end{tikzpicture}
+%\end{intgr}
+%\end{dfn}
+%
+%%\begin{rmq}
+%%    \begin{itemize}
+%%    \item On appelle \emph{droite numérique} une droite repérée.
+%%    \item Tous les nombres utilisés en classe de seconde sont des \emph{réels}.
+%%    \end{itemize}
+%%\end{rmq}
+
+\begin{ntt}
+    \begin{itemize}
+    \item $\R+$ est l'ensemble des réels positifs (ou nuls) et $\R-$ est l'ensemble des réels négatifs (ou nuls).
+    \item $\R*$ est l'ensemble des réels non nuls.
+    \item $\R+*$ est l'ensemble des réels strictement positifs et $\R-*$ est l'ensemble des réels strictement négatifs.
+    \end{itemize}
+\end{ntt}
+
+
+%<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->
+%
+                \section{Fractions}
+%
+%<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->
+%
+%
+    \begin{dfn} Soient $a$ et $b$ deux réels avec $b$ non nul.
+    
+    Le quotient de $a$ par $b$, dont l'écriture sous forme de fraction est $\frac{a}{b}$, est le nombre défini par     $\frac{a}{b}\times b=a$.
+    \end{dfn}
+%
+    \begin{rmq}
+            \begin{itemize}
+        \item On ne peut pas diviser par $0$ : l'écriture $\frac{a}{0}$  (où $a$ est un réel) n'a pas de sens.
+        \item Un nombre réel a une infinité d'écritures fractionnaires: $0,3\underline{3}\cdots=\frac13=\frac26=\frac{1,2}{3,6}=\frac{\sqrt{2}}{\sqrt{18}}=\cdots$.
+        \end{itemize}
+    \end{rmq}
+%
+    \begin{prp}[name={Opérations sur les fractions}]
+    $a$, $b$, $c$ et $d$ sont des réels avec $b\neq0$ et $d\neq0$.
+    \begin{itemize}
+    \item Règle de simplification. Pour tout réel $k$ non nul : \hfill $\frac{a}{b}=\frac{ka}{kb}$ \hfill~
+    \item Addition et soustraction
+        \begin{itemize}
+        \item (Cas des dénominateurs égaux) \hfill 
+         $\frac{a}{b}+\frac{c}{b}=\frac{a+c}{b}$ et $\frac{a}{b}-\frac{c}{b}=\frac{a-c}{b}$.
+         \hfill~
+        \item (Cas général) \hfill
+        $\frac{a}{b}+\frac{c}{d}=\frac{ad}{bd}+\frac{bc}{bd}=\frac{ad+bc}{bd}$ \quad et \quad        
+        $\frac{a}{b}-\frac{c}{d}=\frac{ad}{bd}-\frac{bc}{bd}=\frac{ad-bc}{bd}$.\hfill~
+        \end{itemize}
+    \item Multiplication: \hfill $\frac{a}{b}\times\frac{c}{d}=\frac{ac}{bd}$.    \hfill~
+    \item Division : \hfill 
+        $\frac{\frac{a}{b}}{\frac{c}{d}}=\frac{a}{b}\times\frac{d}{c}=\frac{ad}{bc}$ lorsque $c\neq0$.\hfill~
+\end{itemize}
+    \end{prp}
+%
+    \begin{rmq}
+        \begin{itemize}
+        \item Soient $a$, $b$ et $k$ trois nombres réels avec $b\neq0$. On a :        
+        $\frac{a}{b}\times k= \frac{a}{b}\times \frac{k}{1} = \frac{ak}{b}$.
+        \item    Soient $a$, $b$ et $c$ trois réels avec $b$ et $c$ non nuls.
+
+\vspace*{3pt}   On a $\frac{\frac{a}{b}}{c}=\frac{\frac{a}{b}}{\frac{c}{1}}=\frac{a}{bc}$ et $\frac{a}{\frac{b}{c}}=\frac{\frac{a}{1}}{\frac{b}{c}}=\frac{ac}{b}$ (ce sont des nombres différents).    
+        \end{itemize}
+   \end{rmq} 
+%
+%
+%<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->
+%
+                \section{Puissances}
+%
+%<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->
+%
+    \begin{dfn}
+        \begin{itemize}
+        \item Pour tout nombre réel $a$ et tout nombre entier $n$ non nul : $a^n=\underbrace{a\times a \times \cdots\times a}_{n\text{ facteurs }a}$.
+        \item Pour tout nombre réel $a$ non nul, on pose $a^0=1$.
+        \end{itemize}
+    \end{dfn}
+%
+    \begin{dfn} Pour tout nombre réel $a$ non nul et tout nombre entier $n$ : $a^{-n}=\dfrac{1}{a^n}$.
+    \end{dfn}
+%
+    \begin{prp}[name={puissances et opérations}]
+    Pour tous  réels $a$ et $b$ non nuls et pour tout  entier relatif $n$ et $m$ :
+    \begin{tasks}[label=\labelitemi](5)
+        \task $a^m\times a^n=a^{m+n}$
+        \task $\dfrac{a^m}{a^n}=a^{m- n}$
+        \task $(a\times b)^n=a^n\times b^n$
+        \task $\mleft(\dfrac{a}{b}\mright)^n=\dfrac{a^n}{b^n}$
+        \task $(a^m)^n=a^{m\times n}$
+        \end{tasks}
+    \end{prp}
+%
+   \begin{rmq}
+   Lorsque $a=0$ ou $b=0$, les formules qui ont un sens restent vraies (c'est-à-dire lorsqu'on n'a ni une division par $0$, comme avec une puissance négative de $0$, ni $0^0$, qui pose certains problèmes).
+   \end{rmq} 
+%
+    \begin{prp}[name={puissances et signes},newline]
+    Soient $a$ un nombre réel non nul et $n$ un nombre entier relatif. %    
+    $(-a)^n=\begin{dcases}a^n&\text{si } n\text{ est pair}\\ -a^n& \text{si } n \text{ est impair} \end{dcases}$
+    \end{prp}
+%
+    \begin{csp} Soit $a$ un nombre réel.
+    \begin{tasks}[label=\labelitemi](2)
+        \task Le \emph{carré} de $a$ est $a^2$ (puissance $2$).
+        \task Le \emph{cube} de $a$ est $a^3$ (puissance $3$).
+        \end{tasks}
+    \end{csp}
+%
+    \begin{csp} Soit $n$ un nombre entier non nul.
+    \begin{tasks}[label=\labelitemi](2)
+        \task $10^n=1\underbrace{0\cdots0}_{n\text{ zéros}}$.
+        \task $10^{-n}=\dfrac{1}{10^n}=\underbrace{0,0\cdots0}_{n\text{ zéros}}1$.
+        \end{tasks}
+    \end{csp}
+%
+%<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->
+%
+            \section{Racines carrées}
+%
+%<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->--<-->
+%
+    \begin{dfn}
+    Pour tout nombre réel $a$ positif ou nul :\newline 
+    la racine carrée de $a$, notée $\sqrt{a}$, est le nombre réel positif qui élevé au carré donne $a$.
+    
+    Autrement dit $\sqrt{a}$ est le nombre réel $b$ tel que $b\geqslant 0$ et $b^2=a$.  
+    \end{dfn}
+%
+    \begin{prp}
+    Pour tous nombres réels $a$ et $b$ positifs ou nuls :
+        \begin{tasks}[label=\labelitemi](2)
+        \task $\sqrt{a\times b}=\sqrt{a}\times\sqrt{b}$.
+        \task Si $b\neq 0$ alors $\sqrt{\dfrac{a}{b}}=\dfrac{\sqrt{a}}{\sqrt{b}}$.
+        \end{tasks}
+    \end{prp}
+%
+    \begin{prp}
+        \begin{tasks}[label=\labelitemi](2)
+        \task Pour tout nombre $a\in\R+$ : $\sqrt{a}^2=a$.
+        \task Pour tout nombre $a\in\R$ : $\sqrt{a^2}=\abs{a}$.
+        \end{tasks}
+    \end{prp}
+%
+    \begin{prp}
+    Pour tous nombres réels strictement positifs $a$ et $b$, $\sqrt{a+b}<\sqrt{a}+\sqrt{b}$.
+    \end{prp}
