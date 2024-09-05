@@ -1,0 +1,82 @@
+% !TeX program = LuaLaTeX-SE
+% !TeX encoding = UTF-8
+% !TeX spellcheck = fr_FR
+%
+\documentclass[%
+    11pt,%
+    %
+    niveau=2,%
+    % division = 12,%
+    %
+    partie-titre=fct,%
+    %
+    chapitre-num=1,%
+    chapitre-titre={Fonctions affines},%
+    %
+    chemin={./src},%
+    %
+    genre=e,%
+%    nested-src,%
+    sousgenre-at=south,%
+    %
+    % massicot=act2fordistrib,%
+    % page-pleine,%
+    ]{cours}
+%\setmathfont{Cambria Math}
+%\setmainfont{Cambria}
+%
+% metapost packages :
+% mptrees
+%
+\usepackage{%
+    mys-notation-math,%
+    mys-notation-ens-nbre,%
+    mys-calcul,%
+    mys-notation-nonmath,%
+    mys-notation-geometrie,%
+    mys-notation-nombre,%
+    mys-notation-analyse,%
+%    mys-notation-arith,%
+    mys-notation-fonction,%
+    mys-notation-logique,%
+    mys-l3points,%
+%    mys-notation-lycee,%
+%    mys-notation-pourcentage,%
+%    mys-notation-proba,%
+%    mys-notation-trigo,%
+%    mys-notation-vect,%
+    mys-l3droites,%
+    mys-graph-repere,%
+    mys-info-python,%
+    }
+%
+%\usepackage{lua-visual-debug}
+%
+%####################################################
+%++++++++++++++++++++++++++++++++++++++++++++++++++++
+%
+%  Titre du chapitre
+%     \title{Les calculs}
+%
+%++++++++++++++++++++++++++++++++++++++++++++++++++++
+%####################################################
+%
+%\resetnumofparts
+%
+%\makeatletter       %% <- make @ usable in command sequences
+%\@secpenalty=0      %% <- don't encourage breaks before section heading
+%\@beginparpenalty=0 %% <- don't encourage breaks at start of list environments
+%\@endparpenalty=0   %% <- don't encourage breaks at end of list environments
+%\@itempenalty=0     %% <- don't encourage breaks between items
+%\makeatother        %% <- revert @
+%
+\metadatadate{3}{10}{2023}
+%
+\begin{document}
+%
+\maketitle{}
+%
+\Input{fct-affine}
+%\Input{fct-affine-cl}
+%
+\end{document}
